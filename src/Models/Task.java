@@ -1,5 +1,7 @@
 package Models;
 
+import jdk.jfr.Timestamp;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -13,6 +15,7 @@ public class Task {
     private long ID;
     private String name;
     private String description;
+    @Temporal(TemporalType.DATE)
     private Date deadline;
 
     @OneToOne
