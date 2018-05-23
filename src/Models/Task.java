@@ -1,8 +1,7 @@
 package Models;
 
-import jdk.jfr.Timestamp;
-
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -64,12 +63,14 @@ public class Task {
 
     @Override
     public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return "Task{" +
                 "ID=" + ID +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", deadline=" + deadline +
+                ", deadline=" + sdf.format(deadline) +
                 ", priority=" + priority +
                 '}';
     }
+
 }

@@ -1,17 +1,45 @@
 import Models.Priority;
 import Models.Task;
+import DAO.DAO;
 
 import javax.persistence.*;
 import java.util.Calendar;
 import java.util.List;
 
+
 public class Main {
 
     public static void main(String[] args) {
 
+
+
+        /* // TEST DAO
+        DAO dao = new DAO();
+        List<Priority> priorities = dao.getAllPriority();
+        for (Priority p : priorities) {
+            System.out.println(p.toString());
+        }
+        //dao.createTask("Bonjour","dire bonjour", Calendar.getInstance().getTime(), dao.getPriorityByID(2));
+
+        List<Task> tasks = dao.getAllTask();
+        for (Task task : tasks) {
+            System.out.println(task.toString());
+        }
+
+        Task task = dao.getTaskByID(5);
+        System.out.println(task.toString());
+        task.setDescription("Dire bonjour à tout le monde");
+        dao.update(task);
+        task = dao.getTaskByID(5);
+        System.out.println(task.toString());
+        dao.deleteTask(task);
+        */
+
+        /*
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("JavaEE_ESGI_Tasks");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
+        */
 
         /*
         Priority low = new Priority("Basse");
@@ -33,7 +61,7 @@ public class Main {
          * JPA - Hibernate interaction here
          * */
 
-        tx.begin();
+        //tx.begin();
 
         /*
         em.persist(low);
@@ -46,7 +74,8 @@ public class Main {
         em.persist(task3);
         */
 
-        String QUERY = "select t from Task t where t.priority.id = 9";
+        /*
+        String QUERY = "select t from Task t where t.priority.id = 0";
         Query query = em.createQuery(QUERY);
 
         List<Task> tasks = query.getResultList();
@@ -59,5 +88,6 @@ public class Main {
 
         em.close();
         emf.close();
+        */
     }
 }
