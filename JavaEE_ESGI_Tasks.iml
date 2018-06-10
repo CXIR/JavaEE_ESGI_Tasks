@@ -45,5 +45,6 @@
     <orderEntry type="library" name="Spring MVC-4.3.16.RELEASE" level="project" />
     <orderEntry type="library" name="javax.xml.bind" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.31" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>
