@@ -19,7 +19,6 @@ public class Task {
     private Date deadline;
 
     @OneToOne
-    @JoinColumn(name = "Priority_ID")
     private Priority priority;
 
     public Task(){ }
@@ -60,6 +59,10 @@ public class Task {
 
     public void setPriority(Priority priority) {
         this.priority = priority;
+    }
+
+    public long getID() {
+        return ID;
     }
 
     @Override
