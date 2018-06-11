@@ -28,6 +28,10 @@ public class Priority {
         this.name = name;
     }
 
+    public long getID() {
+        return ID;
+    }
+
     @Override
     public String toString() {
         return "Priority{" +
