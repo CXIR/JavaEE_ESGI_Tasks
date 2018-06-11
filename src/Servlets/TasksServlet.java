@@ -1,6 +1,6 @@
 package Servlets;
 
-import DAO.DAO;
+import DAO.*;
 import Models.Priority;
 import Models.Task;
 
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-@WebServlet( name        ="TasksServlet",
+@WebServlet( name        = "TasksServlet",
              urlPatterns = "/Tasks")
 public class TasksServlet extends javax.servlet.http.HttpServlet {
 

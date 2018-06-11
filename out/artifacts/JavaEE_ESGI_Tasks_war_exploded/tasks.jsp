@@ -21,7 +21,9 @@
 </head>
 <body>
 
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="tab" value="1"/>
+</jsp:include>
 
 <div class="wrap">
 
@@ -41,7 +43,7 @@
         <% for(Priority priority : (List<Priority>) request.getAttribute("priorities")) { %>
         <li class="nav-item">
             <a class=" nav-link
-                       <%= ( priority.getID() == 10) ? "btn btn-outline-danger" : ""%>
+                       <%= ( priority.getID() == 4) ? "btn btn-outline-danger" : ""%>
                        <%= ( priority.getID() == (Integer) request.getAttribute("category") ? "active" : "")%>"
                href="/Tasks?category=<%= priority.getID() %>"><%= priority.getName() %></a>
         </li>
@@ -49,6 +51,8 @@
     </ul>
 
     <br/><br/>
+
+    <em class="text-info">Les tâches sont triées par ordre alphabétique</em>
 
     <table class="table table-striped">
         <thead>
@@ -69,7 +73,7 @@
                 if( (Integer) request.getAttribute("edit") == task.getID() ) {
         %>
 
-            <tr>
+            <tr class="<%= task.getPriority().getID() == 4 ? "table-danger" : ""%>">
                 <form method="post" action="/Tasks">
                     <td>
                         <%= task.getID() %>
@@ -113,7 +117,7 @@
             } else {
         %>
 
-        <tr>
+        <tr class="<%= task.getPriority().getID() == 4 ? "table-danger" : ""%>">
           <td><%= task.getID() %></td>
           <td><%= task.getName() %></td>
           <td><%= task.getDescription() %></td>

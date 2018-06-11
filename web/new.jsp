@@ -3,6 +3,7 @@
 <%@ page import="Models.Priority" %>
 <%@ page import="java.util.List" %>
 <%@ page pageEncoding="UTF-8" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: ludwigroger
@@ -10,7 +11,9 @@
   Time: 18:23
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <jsp:include page="header.jsp"/>
@@ -18,7 +21,9 @@
 </head>
 <body>
 
-    <jsp:include page="navbar.jsp"/>
+    <jsp:include page="navbar.jsp">
+        <jsp:param name="tab" value="2"/>
+    </jsp:include>
 
     <div class="wrap">
 
@@ -27,11 +32,13 @@
         <br/>
         <br/>
 
-        <p class="text-danger"><%= request.getAttribute("message") != null ? (String) request.getAttribute("message") : ""%></p>
-
         <form class="mini-form" method="post" action="/New">
             <fieldset>
                 <legend>Créer une Tâche</legend>
+
+                <h6 class="text-danger"><%= request.getAttribute("error") != null ? (String) request.getAttribute("error") : ""%></h6>
+                <h6 class="text-success"><%= request.getAttribute("success") != null ? (String) request.getAttribute("success") : ""%></h6>
+
                 <div class="form-group">
                     <label for="title">Titre :</label>
                     <input type="text" class="form-control" id="title" placeholder="Titre..." name="title" value="<c:out value="${ param.title }"/>">
@@ -54,7 +61,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Créer</button>
-                <button type="reset" class="btn btn-danger">Effacer</button>
+                <a class="btn btn-danger text-white" href="/New">Effacer</a>
             </fieldset>
         </form>
 

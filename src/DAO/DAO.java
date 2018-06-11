@@ -60,16 +60,23 @@ public class DAO {
 
     // Création d'une tâche avec priorité
     public void createTask(String name, String description, Date deadline, Priority priority){
+
         open();
+
         try {
+
             tx.begin();
+
             Task task = new Task(name, description, deadline);
             task.setPriority(priority);
+
             em.persist(task);
             tx.commit();
+
         } finally {
             if (tx.isActive())
                 tx.rollback();
+
             close();
         }
     }
@@ -79,7 +86,7 @@ public class DAO {
         List<Task> tasks;
         open();
         try {
-            String QUERY = "from Task";
+            String QUERY = "select t from Task t order by t.name";
             Query query = em.createQuery(QUERY);
             tasks = query.getResultList();
         } finally {
@@ -261,7 +268,7 @@ public class DAO {
         open();
 
         try {
-            String QUERY = "select t from Task t where t.priority.id = " + priorityID;
+            String QUERY = "select t from Task t where t.priority.id = " + priorityID + " order by t.name";
             Query query = em.createQuery(QUERY);
             tasks = query.getResultList();
         } finally {
@@ -270,5 +277,25 @@ public class DAO {
 
         return tasks;
 
+    }
+
+    public void createPriority(String name){
+
+        open();
+
+        try {
+            tx.begin();
+
+            Priority priority = new Priority(name);
+
+            em.persist(priority);
+            tx.commit();
+
+        } finally {
+            if (tx.isActive())
+                tx.rollback();
+
+            close();
+        }
     }
 }

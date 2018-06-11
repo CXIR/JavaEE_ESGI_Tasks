@@ -21,10 +21,12 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <li class="nav-item <%= request.getParameter("tab") != null
+                                        && Integer.parseInt(request.getParameter("tab")) == 1 ? "active" : ""%>">
                     <a class="nav-link" href="/Tasks">Les Tâches</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <%= request.getParameter("tab") != null
+                                        && Integer.parseInt(request.getParameter("tab")) == 2 ? "active" : ""%>">
                     <a class="nav-link" href="/New">Nouveau</a>
                 </li>
             </ul>

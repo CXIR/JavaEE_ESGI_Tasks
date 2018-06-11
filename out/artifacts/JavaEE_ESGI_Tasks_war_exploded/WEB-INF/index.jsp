@@ -13,12 +13,12 @@
 
 <html>
   <head>
-    <title></title>
-    <jsp:include page="header.jsp"/>
+    <title>Accueil</title>
+    <jsp:include page="../header.jsp"/>
   </head>
   <body>
 
-  <jsp:include page="navbar.jsp"/>
+  <jsp:include page="../navbar.jsp"/>
 
   <div class="wrap">
     <div class="jumbotron">
