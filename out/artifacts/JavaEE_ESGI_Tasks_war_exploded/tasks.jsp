@@ -3,6 +3,7 @@
 <%@ page import="Models.Task" %>
 <%@ page import="java.util.List" %>
 <%@ page import="Models.Priority" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -11,8 +12,6 @@
   Time: 15:28
   To change this template use File | Settings | File Templates.
 --%>
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
@@ -40,14 +39,18 @@
                        <%= (Integer) request.getAttribute("category") == 0 ? "active" : ""%>"
                href="/Tasks">Toutes</a>
         </li>
-        <% for(Priority priority : (List<Priority>) request.getAttribute("priorities")) { %>
+        <%
+            for(Priority priority : (List<Priority>) request.getAttribute("priorities")) {
+        %>
         <li class="nav-item">
             <a class=" nav-link
                        <%= ( priority.getID() == 4) ? "btn btn-outline-danger" : ""%>
                        <%= ( priority.getID() == (Integer) request.getAttribute("category") ? "active" : "")%>"
                href="/Tasks?category=<%= priority.getID() %>"><%= priority.getName() %></a>
         </li>
-        <% } %>
+        <%
+            }
+        %>
     </ul>
 
     <br/><br/>

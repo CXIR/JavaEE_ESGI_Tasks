@@ -6,21 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7094b60c-33b0-4cd6-b020-398db312373f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Priority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/NewTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/NewTaskServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/TasksServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/TasksServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/inc/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/inc/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tasks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/tasks.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="7094b60c-33b0-4cd6-b020-398db312373f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,8 +52,8 @@
       <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -450,12 +436,12 @@
       <workItem from="1528713984838" duration="14000" />
       <workItem from="1528719500617" duration="5000" />
       <workItem from="1528805838099" duration="289000" />
-      <workItem from="1528806253793" duration="1418000" />
+      <workItem from="1528806253793" duration="1577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44439000" />
+    <option name="totallyTimeSpent" value="44598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="102" y="23" width="1521" height="865" extended-state="0" />
@@ -484,7 +470,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49622643" visible="true" weight="0.24983564" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49622643" visible="true" weight="0.24983564" />
       <window_info id="Web" order="7" sideWeight="0.50377357" side_tool="true" weight="0.24983564" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -784,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

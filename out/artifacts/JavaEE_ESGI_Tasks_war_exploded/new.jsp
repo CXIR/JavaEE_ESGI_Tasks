@@ -3,6 +3,7 @@
 <%@ page import="Models.Priority" %>
 <%@ page import="java.util.List" %>
 <%@ page pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -11,8 +12,6 @@
   Time: 18:23
   To change this template use File | Settings | File Templates.
 --%>
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
@@ -55,9 +54,15 @@
                     <label for="priority">Priorité :</label>
                     <select class="custom-select" id="priority" name="priority">
                         <option value="0"> -- Priorité -- </option>
-                        <% for(Priority priority : (List<Priority>) request.getAttribute("priorities")) { %>
+                        <%
+                            for(Priority priority : (List<Priority>) request.getAttribute("priorities")) {
+                        %>
+
                         <option value="<%= priority.getID() %>"><%= priority.getName() %></option>
-                        <% } %>
+
+                        <%
+                            }
+                        %>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Créer</button>
