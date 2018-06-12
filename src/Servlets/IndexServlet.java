@@ -13,20 +13,19 @@ import java.io.IOException;
 public class IndexServlet extends HttpServlet {
 
     private static final String CONF_DAO = "dao";
+
     private DAO dao;
 
     public void init() throws ServletException {
-        this.dao = (DAO) getServletContext().getAttribute(CONF_DAO);
+        this.dao = (DAO) getServletContext().getAttribute( CONF_DAO );
     }
 
     public IndexServlet(){
         super();
     }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    protected void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
         if( dao.getAllPriority().isEmpty()){
 
@@ -36,6 +35,6 @@ public class IndexServlet extends HttpServlet {
             dao.createPriority("Urgente");
         }
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
+        this.getServletContext().getRequestDispatcher( "/WEB-INF/index.jsp" ).forward( request, response );
     }
 }

@@ -16,27 +16,35 @@ public class Priority {
 
     public Priority(){ }
 
-    public Priority(String name) {
+    public Priority( String name ) {
+
         this.name = name;
     }
 
     public String getName() {
+
         return name;
     }
 
-    public void setName(String name) {
+    public void setName( String name ) {
+
         this.name = name;
     }
 
     public long getID() {
+
         return ID;
     }
 
     @Override
     public String toString() {
-        return "Priority{" +
-                "ID=" + ID +
-                ", name='" + name + '\'' +
-                '}';
+
+        return  "Priority {"
+                + "ID="
+                + ID
+                + ", name='"
+                + name
+                + '\''
+                + '}';
     }
 }
